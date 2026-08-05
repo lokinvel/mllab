@@ -1,0 +1,18 @@
+# Create the Logistic Regression model
+model = LogisticRegression(max_iter=5000)
+
+# Train the model
+model.fit(X_train, y_train)
+
+# Predict the test data
+y_pred = model.predict(X_test)
+
+# Evaluate the model
+cm = confusion_matrix(y_test, y_pred)
+accuracy = accuracy_score(y_test, y_pred)
+
+# Display the results
+print("Confusion Matrix:")
+print(cm)
+
+print("\nAccuracy:", accuracy)
