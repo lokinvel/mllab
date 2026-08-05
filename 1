@@ -1,0 +1,42 @@
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import MinMaxScaler
+
+# Read the dataset
+data = pd.read_csv("data1.csv")
+
+# Display the original dataset
+print("Original Dataset")
+print(data.head())
+
+# Fill missing numeric values with the column mean
+data.fillna(data.select_dtypes(include=["number"]).mean(), inplace=True)
+
+# Encode categorical columns
+label_encoder = LabelEncoder()
+
+for column in data.select_dtypes(include=["object", "string"]).columns:
+    data[column] = label_encoder.fit_transform(data[column])
+
+# Display the encoded dataset
+print("\nDataset after Encoding:")
+print(data.head())
+
+# Standardize the data
+scaler = StandardScaler()
+scaled_data = scaler.fit_transform(data)
+
+scaled_df = pd.DataFrame(scaled_data, columns=data.columns)
+
+print("\nStandardized Data:")
+print(scaled_df.head())
+
+# Normalize the data
+normalizer = MinMaxScaler()
+normalized_data = normalizer.fit_transform(data)
+
+normalized_df = pd.DataFrame(normalized_data, columns=data.columns)
+
+print("\nNormalized Data:")
+print(normalized_df.head())
