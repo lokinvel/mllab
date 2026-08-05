@@ -1,0 +1,43 @@
+from sklearn.model_selection import train_test_split
+from sklearn.model_selection import KFold
+from sklearn.model_selection import cross_val_score
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.datasets import load_iris
+
+# Load the Iris dataset
+iris = load_iris()
+
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, random_state=42
+)
+
+print("Training Set Size:", len(X_train))
+print("Test Set Size:", len(X_test))
+
+# Create the Decision Tree model
+model = DecisionTreeClassifier(random_state=42)
+
+# Define 5-Fold Cross Validation
+kfold = KFold(n_splits=5, shuffle=True, random_state=42)
+
+# Perform Cross Validation
+scores = cross_val_score(
+    model,
+    X_train,
+    y_train,
+    cv=kfold,
+    scoring="accuracy"
+)
+
+# Display accuracy for each fold
+print("\nAccuracy for each Fold:")
+for i, score in enumerate(scores, start=1):
+    print(f"Fold {i}: {score:.4f}")
+
+# Display mean accuracy and standard deviation
+print("\nMean Accuracy:", scores.mean())
+print("Standard Deviation:", scores.std())
