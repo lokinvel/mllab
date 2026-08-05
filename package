@@ -1,0 +1,11 @@
+1. pip install pandas scikit-learn
+
+2. pip install pandas matplotlib seaborn
+
+3. pip install scikit-learn
+
+4a. pip install pandas matplotlib scikit-learn
+
+4b. pip install pandas scikit-learn
+
+5. pip install scikit-learn
