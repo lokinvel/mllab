@@ -1,0 +1,450 @@
+program 7:
+
+mkdir VisitorCounter
+
+cd VisitorCounter
+
+npm init -y
+
+npm install express express-session
+
+code .
+
+In vs code create app.js
+
+then paste the code
+
+const express = require("express");
+const session = require("express-session");
+
+const app = express();
+
+app.use(session({
+    secret: "mykey",
+    resave: false,
+    saveUninitialized: true
+}));
+
+app.get("/", (req, res) => {
+    req.session.views = (req.session.views || 0) + 1;
+    res.send(`<h2>Visitor Counter</h2>
+              <p>You visited ${req.session.views} time(s)</p>`);
+});
+
+app.listen(3000, () => {
+    console.log("Server Running at http://localhost:3000");
+});
+
+then run in the cmd
+
+node app.js
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 6:
+
+npx create-react-app calculator
+
+cd calculator
+
+code .
+
+then src->app.js
+
+paste the code
+
+import { useState } from "react";
+
+function App() {
+  const [num1, setNum1] = useState("");
+  const [num2, setNum2] = useState("");
+  const [result, setResult] = useState("");
+
+  const add = () => {
+    setResult(Number(num1) + Number(num2));
+  };
+
+  const subtract = () => {
+    setResult(Number(num1) - Number(num2));
+  };
+
+  const multiply = () => {
+    setResult(Number(num1) * Number(num2));
+  };
+
+  const divide = () => {
+    if (Number(num2) === 0) {
+      setResult("Cannot divide by zero");
+    } else {
+      setResult(Number(num1) / Number(num2));
+    }
+  };
+
+  const clear = () => {
+    setNum1("");
+    setNum2("");
+    setResult("");
+  };
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>Calculator</h2>
+
+      <input
+        type="number"
+        placeholder="First Number"
+        value={num1}
+        onChange={(e) => setNum1(e.target.value)}
+      />
+
+      
+
+
+
+      <input
+        type="number"
+        placeholder="Second Number"
+        value={num2}
+        onChange={(e) => setNum2(e.target.value)}
+      />
+
+      
+
+
+
+      <button onClick={add}>+</button>
+
+      <button onClick={subtract} style={{ marginLeft: "10px" }}>
+        -
+      </button>
+
+      <button onClick={multiply} style={{ marginLeft: "10px" }}>
+        Ã
+      </button>
+
+      <button onClick={divide} style={{ marginLeft: "10px" }}>
+        Ã·
+      </button>
+
+      <button onClick={clear} style={{ marginLeft: "10px" }}>
+        Clear
+      </button>
+
+      <h3>Result: {result}</h3>
+    </div>
+  );
+}
+
+export default App;
+
+then run in cmd: npm start
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+program 5
+
+
+mkdir ElectronApp
+
+cd ElectronApp
+
+npm init -y
+
+npm install electron --save-dev
+
+code .
+
+then create the index.js
+
+const { app, BrowserWindow } = require("electron");
+
+function createWindow() {
+    const win = new BrowserWindow({
+        width: 800,
+        height: 600
+    });
+
+    win.loadURL(`data:text/html,
+    <html>
+    <head>
+        <title>Electron App</title>
+    </head>
+    <body style="font-family:Arial;text-align:center;">
+        <h1>Welcome to Electron App</h1>
+        <p>Hello World</p>
+    </body>
+    </html>`);
+}
+
+app.whenReady().then(createWindow);
+
+app.on("window-all-closed", () => {
+    if (process.platform !== "darwin") {
+        app.quit();
+    }
+});
+
+
+
+then in package.json file paste the code
+
+
+{
+  "name": "electronapp",
+  "version": "1.0.0",
+  "main": "index.js",
+    "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "electron": "^43.3.0"
+  }
+}
+
+
+then run in cmd: npm start
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 4
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat Module</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="chat-container">
+    <h2>Simple Chat</h2>
+
+    <div id="chatBox" class="chat-box"></div>
+
+    <div class="input-area">
+        <input
+            type="text"
+            id="message"
+            placeholder="Type your message..."
+        />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+style.css
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.chat-container{
+    width:350px;
+    background:white;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    padding:20px;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.chat-box{
+    height:300px;
+    border:1px solid #ccc;
+    overflow-y:auto;
+    padding:10px;
+    margin-bottom:15px;
+    background:#fafafa;
+}
+
+.message{
+    background:#007bff;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:10px;
+    width:fit-content;
+    max-width:80%;
+}
+
+.input-area{
+    display:flex;
+}
+
+input{
+    flex:1;
+    padding:10px;
+    font-size:16px;
+}
+
+button{
+    padding:10px 15px;
+    margin-left:5px;
+    cursor:pointer;
+    background:#28a745;
+    color:white;
+    border:none;
+}
+
+
+
+script.js
+
+
+function sendMessage() {
+    let input = document.getElementById("message");
+    let chatBox = document.getElementById("chatBox");
+
+    let userMessage = input.value.trim();
+
+    if (userMessage === "") return;
+
+    // User message
+    let user = document.createElement("div");
+    user.className = "user-message";
+    user.innerText = "You: " + userMessage;
+    chatBox.appendChild(user);
+
+    input.value = "";
+
+    // Bot reply
+    let botReply = getBotReply(userMessage);
+
+    setTimeout(() => {
+        let bot = document.createElement("div");
+        bot.className = "bot-message";
+        bot.innerText = "Bot: " + botReply;
+        chatBox.appendChild(bot);
+
+        chatBox.scrollTop = chatBox.scrollHeight;
+    }, 500);
+}
+
+function getBotReply(message) {
+    message = message.toLowerCase();
+
+    if (message === "hi" || message === "hello") {
+        return "Hello! How can I help you?";
+    }
+    else if (message === "how are you") {
+        return "I'm doing great! Thanks for asking.";
+    }
+    else if (message === "what is your name") {
+        return "I'm a 55chatbot.";
+    }
+    else if (message === "bye") {
+        return "Goodbye! Have a nice day.";
+    }
+    else {
+        return "Sorry, I don't understand your message.";
+    }
+}
+
+document.getElementById("message").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        sendMessage();
+    }
+});
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 1 to 3
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            text-align: center;
+        }
+
+        input{
+            margin: 5px;
+            padding: 8px;
+        }
+
+        button{
+            padding: 8px;
+        }
+    </style>
+
+    <script>
+        function changeText(){
+            document.getElementById("msg").innerHTML="Welcome MCA!";
+        }
+
+        function validate(){
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+
+            if(name=="" || email==""){
+                alert("Fill all fields");
+                return false;
+            }
+
+            alert("Registration Successful");
+            return true;
+        }
+    </script>
+
+</head>
+
+<body>
+
+<h1>My Webpage</h1>
+
+<p id="msg">Welcome to HTML</p>
+
+<button onclick="changeText()">Click Me</button>
+
+<hr>
+
+<h2>Registration Form</h2>
+
+<form onsubmit="return validate()">
+
+<input type="text" id="name" placeholder="Enter Name"><br>
+
+<input type="email" id="email" placeholder="Enter Email"><br>
+
+<input type="submit" value="Register">
+
+</form>
+
+</body>
+</html>
