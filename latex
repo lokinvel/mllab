@@ -1,0 +1,345 @@
+program 1
+
+
+
+\documentclass{article}
+
+\begin{document}
+
+\title{Machine Learning}
+\author{\textit{Dharini}}
+\date{June 2025}
+
+\maketitle
+
+\section{What is Machine Learning?}
+
+\normalsize
+Machine Learning (ML) is a type of Artificial Intelligence (AI) that allows computers to learn without being explicitly programmed. It involves feeding data into algorithms that can then identify patterns and make predictions on new data. Machine Learning is used in a variety of applications, including image and speech recognition.
+
+\subsection{Classification of Machine Learning}
+
+Machine learning implementations are classified into four major categories, depending on the learning ``signal'' or response available to a learning system, which are as follows:
+
+\subsubsection{\textbf{Supervised Learning:}}
+
+It is a machine learning task of learning a function that maps an input to an output based on example pairs.
+
+\small
+\textbf{Example:} Consider the following data regarding patients entering a clinic. The data consists of the gender and age of the patients, and each patient is labeled as ``healthy'' or ``sick''.
+
+\subsubsection{\textbf{Unsupervised Learning:}}
+
+\large
+Unsupervised learning is a type of machine learning algorithm used to draw inferences from data sets consisting of input data without labeled responses. In unsupervised learning algorithms, classification or categorization is not included in the observations.
+
+\end{document}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 2
+
+
+
+\documentclass[twocolumn]{article}
+
+\usepackage[landscape,a4paper]{geometry}
+\geometry{margin=2cm}
+
+\begin{document}
+
+\title{\textbf{Page Dimension, Margin, Two-Column}}
+\author{Student}
+
+\maketitle
+
+\begin{large}
+
+\section{Introduction}
+
+\textit{LaTeX is a high-quality typesetting system; it includes features designed for the production of technical and scientific documentation. LaTeX is the standard for the communication and publication of scientific documentation.}
+
+\subsection{Definition}
+
+\textbf{LaTeX} is a programming language similar to C. In particular, LaTeX code must be compiled to produce a document. This is often done using PDFLaTeX, a program which produces a PDF file from a LaTeX document.
+
+LaTeX is widely used in academia for the communication and publication of scientific documents and technical note-taking in many fields, owing particularly to its support for complex mathematical notation, etc.
+
+\subsection{Typesetting}
+
+LaTeX attempts to follow the design philosophy of separation of presentation from content, so that authors can focus on the content of what they are writing without attending simultaneously to its visual appearance.
+
+\subsection{Document}
+
+To create a document in LaTeX, a user first creates a file, such as \texttt{document.tex}, typically using a text editor. The user then gives their \texttt{document.tex} file as input to the TeX program, which prompts TeX to write out a file suitable for onscreen viewing or printing.
+
+\end{large}
+
+\end{document}
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+program 3
+
+
+\documentclass{article}
+\usepackage{setspace}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textbf{Python Programming}}
+\fancyhead[R]{\textit{Dharini}}
+\fancyfoot[L]{Features}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+\onehalfspacing
+
+\title{\textbf{Python Programming}}
+\author{\textit{Dharini M}}
+\date{July 7, 2025}
+\maketitle
+
+\newpage
+\tableofcontents
+\newpage
+
+\textbf{\Large Chapter 1}
+\section{\textbf{\Large Python Programming}}
+
+In this chapter we will study the data types, features, and operators of Python programming.
+
+\subsection{Introduction}
+
+Python is a widely used programming language that offers several unique features and advantages compared to languages like Java and C++. In the late 1980s, Guido van Rossum dreamed of developing Python.
+
+\subsubsection{Data Types}
+
+\textbf{Numeric Datatype:}
+In Python, numeric data type is used to hold numeric values. Integers, floating-point numbers, and complex numbers fall under Python numbers category. They are defined as \texttt{int}, \texttt{float}, and \texttt{complex}.
+
+\textbf{Sequence Datatype:}
+List is an ordered collection of items separated by commas and enclosed within brackets. Tuple is an ordered sequence of items similar to a list. The only difference is that tuples are immutable.
+
+\subsubsection{Features of Python Programming}
+
+\textbf{Easy to Use and Read:}
+Python's syntax is clear and easy to read, making it an ideal language for beginners and experienced programmers.
+
+\textbf{Cross Platform Compatibility:}
+Python can be installed on Windows, macOS, and Linux, allowing developers to create software that runs across different operating systems.
+
+\textbf{Free and Open Source:}
+Python is freely available and open source. Its source code is also available to the public.
+
+\textbf{Portable Language:}
+Python is portable and can run on different platforms such as Windows, Linux, Unix, and macOS.
+
+\subsubsection{Operators}
+
+An operator is a symbol that performs a specific operation between two operands. Python has several types of operators.
+
+\textbf{Arithmetic Operators:}
+Arithmetic operators include \texttt{+}, \texttt{-}, \texttt{*}, \texttt{/}, \texttt{\%}, \texttt{**}, and \texttt{//}.
+
+\textbf{Comparison Operators:}
+Comparison operators compare two values and return a Boolean value. Examples are \texttt{==}, \texttt{!=}, \texttt{>}, \texttt{<}, \texttt{>=}, and \texttt{<=}.
+
+\textbf{Assignment Operators:}
+Assignment operators assign values to variables. Examples are \texttt{=}, \texttt{+=}, \texttt{-=}, \texttt{*=}, \texttt{\%=}, and \texttt{**=}.
+
+\textbf{Bitwise Operators:}
+Bitwise operators operate on bits. Examples are AND, OR, XOR, NOT, left shift, and right shift.
+
+\textbf{Logical Operators:}
+Logical operators are \texttt{and}, \texttt{or}, and \texttt{not}.
+
+\end{document}
+```
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+program 4
+
+
+
+\documentclass{article}
+
+\usepackage{amsthm}
+
+\begin{document}
+
+\title{\textbf{Displaying List}}
+\author{Dharini}
+\date{July 15, 2025}
+
+\maketitle
+
+\section{\textbf{Introduction}}
+
+In this section we are discussing various types of lists like numbered list, bulleted list, and definition list.
+
+\begin{enumerate}
+
+\item Python program contains many data types. It includes:
+
+\begin{itemize}
+    \item int
+    \item float
+    \item character
+    \item string
+    \item boolean
+\end{itemize}
+
+\item The various types of operators in Python programming are:
+
+\begin{itemize}
+    \item Arithmetic
+    \item Relational
+    \item Logical
+\end{itemize}
+
+\end{enumerate}
+
+\begin{description}
+
+\item[Definition 1] Python was developed by Van Rossum in 1991.
+
+\item[Definition 2] Python was developed in advance with C.
+
+\end{description}
+
+\end{document}
+
+
+
+
+================================================================================================================================================================================
+
+program 5
+
+
+
+
+\documentclass{article}
+
+\usepackage{graphicx}
+
+\title{Image}
+\author{Student}
+\date{July 2025}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+In this section we are discussing how to insert an image in a LaTeX document.
+
+\subsection{Package}
+
+LaTeX cannot manage images by itself. So we need to use the
+\texttt{graphicx} package. To use it, we include the following line
+in the preamble:
+
+\texttt{\textbackslash usepackage\{graphicx\}}
+
+The command
+\texttt{\textbackslash graphicspath\{\{images/\}\}}
+tells LaTeX that the images are kept in a folder named
+\texttt{images} under the directory of the main document.
+
+The \texttt{\textbackslash includegraphics\{universe\}} command is
+the one that actually includes the image. The name of the file
+containing the image is written without the extension. For example,
+\texttt{universe.png} can be included as \texttt{universe}.
+
+The image file name should not contain white spaces or multiple dots.
+It also provides a way to change the width, height, and position of
+the image.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{image}
+    \caption{TeX Studio}
+    \label{fig:enter-label}
+\end{figure}
+
+\end{document}
+```
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+program 6
+
+
+
+\documentclass{article}
+
+\usepackage{multirow}
+\usepackage{caption}
+
+\begin{document}
+
+\title{LaTeX Table}
+\author{Student}
+\date{July 2025}
+
+\maketitle
+
+\section{Introduction}
+
+This topic will explain the steps to create a table and perform
+different functions in the table. Tables are an efficient way to
+represent information and are often used in most documents or files.
+
+\subsection{Create a Table}
+
+Creating a table in LaTeX is a little complicated compared to other
+methods. But here, the steps and procedure to create a table from the
+basics will make the process easier.
+
+\begin{table}[h]
+\centering
+
+\begin{tabular}{|c|c|c|}
+\hline
+
+\multicolumn{3}{|c|}{\textbf{Student Data}} \\
+\hline
+
+\textbf{Roll No.} & \textbf{Name} & \textbf{Department} \\
+\hline
+
+24MCP012 & Dharini & MSc \\
+\hline
+
+24MCP029 & Renolah & MSc \\
+\hline
+
+\multirow{2}{*}{24MCP005} & Hari & MSc \\
+& Tarun & MSc \\
+\hline
+
+\multirow{2}{*}{24MCP006} & Vaishu & MSc \\
+& Kavi & MSc \\
+\hline
+
+\end{tabular}
+
+\caption{Student Information}
+\end{table}
+
+\end{document}
+```
+
