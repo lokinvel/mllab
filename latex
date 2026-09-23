@@ -343,3 +343,525 @@ basics will make the process easier.
 \end{document}
 ```
 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+program 7
+
+
+\documentclass[12pt,a4paper]{report}
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[chapter]
+
+\begin{document}
+
+\chapter{Introduction}
+\label{chap:introduction}
+
+LaTeX is a document preparation system that is widely used for writing scientific,
+mathematical, and technical documents. It allows users to create well-formatted
+documents with equations, tables, figures, references, and bibliographies.
+
+In this document, we demonstrate how to reference chapters, sections, footnotes,
+and mathematical environments. The current chapter is
+Chapter~\ref{chap:introduction}.
+
+\section{Importance of LaTeX}
+\label{sec:importance}
+
+LaTeX is useful because it automatically numbers chapters, sections, equations,
+and other environments. If the document is changed later, the numbers are
+updated automatically.
+
+For example, this is Section~\ref{sec:importance}. We can use the
+\verb|\label| command to give a name to an item and the
+\verb|\ref| command to refer to its number.
+
+LaTeX is especially useful for mathematical documents because mathematical
+expressions can be written clearly. For example,
+
+\begin{equation}
+a^2 + b^2 = c^2
+\label{eq:pythagoras}
+\end{equation}
+
+is displayed as a mathematical equation.
+
+\newpage
+
+\section{Footnotes}
+\label{sec:footnotes}
+
+Footnotes can be added easily using the \verb|\footnote| command. For example,
+
+LaTeX is widely used in universities and research institutions.
+\footnote{LaTeX was originally developed from the TeX typesetting system created by Donald Knuth.}
+
+The footnote appears automatically at the bottom of the page. There is no need
+to manually number the footnote.
+
+\section{Theorem Environment}
+\label{sec:theorem}
+
+We can create numbered environments such as theorems. The following is a simple
+example.
+
+\begin{theorem}
+If two numbers are equal, then their squares are also equal.
+\label{thm:squares}
+\end{theorem}
+
+The above statement is Theorem~\ref{thm:squares}. Thus, we can refer to an
+environment by using its label.
+
+\section{Cross Referencing}
+\label{sec:crossref}
+
+Cross-referencing makes a document easier to maintain. For example,
+Chapter~\ref{chap:introduction} introduces LaTeX, while
+Section~\ref{sec:importance} explains its importance. The mathematical result
+is given in Theorem~\ref{thm:squares}.
+
+The \texttt{hyperref} package makes these references clickable. When the PDF is
+opened, clicking on a chapter, section, or theorem reference takes the reader
+to the corresponding location.
+
+\end{document}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+program 8
+
+\documentclass[12pt,a4paper]{article}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    allcolors=blue
+}
+\title{\textbf{Bibliography}}
+\author{Student}
+\date{26 August 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+In this section we are discussing about bibliography.
+
+\section{Review Literature}
+
+Social media is a revolutionary concept with a totally brilliant possibility with extra scope for advancements. \cite{ref1} Social media has been a crucial part of one's existence from purchasing to digital, education, and commercial enterprise tools. It allows not unusual place hobby primarily based totally groups inclusive of college students to paintings in a collaborative organization project out of doors in their class. \cite{ref2} Social media isn't confined simple to specialists or elders however it's far been broadly utilized in instructional sectors via way of means of students. Students typically use social web sites for lots of motives including for take a look at functions, for amusement functions as social media gives any information you need to shortlist and speedy inside a fragment of a second. \cite{ref3}
+
+\begin{thebibliography}{99}
+
+\bibitem{ref1}
+Shubnoor Siddiqui, Tajinder Singh,
+``Social Media, its Impact with Positive and Negative Aspects,''
+Volume-5, 2016.
+
+\bibitem{ref2}
+Amrutha A. Ename, Vijay M. R. Madhade, Loelesh N. Yadav,
+``A Study on Positive and Negative Effects of Social Media on Society,''
+Volume-3, 2022.
+
+\bibitem{ref3}
+Jyothi Surej Harchckar,
+``Impact of Social Media on Society,''
+Volume-6, 2017.
+
+\end{thebibliography}
+
+\end{document}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 9
+
+\documentclass[twocolumn,11pt]{article}
+
+\usepackage[portrait,a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+
+\begin{document}
+
+\title{\textbf{A Comparative Analysis on OTT Platform: Netflix Vs Amazon Prime}}
+
+\author{\textit{Dr. S. Priya, V. Ramya}}
+
+\date{August 26, 2026}
+
+\maketitle
+
+\begin{abstract}
+
+In the olden days from each family, everyone sit together and watch TV shows. In the today's world when we talk about TV shows, digital media and the availability of the latest movies or series the one word that comes to everyone's mind is OTT. The significant growth of OTT platforms has risen since 2013 and video streaming content will exceed \$332 billion by 2026.
+
+\textbf{Keywords:} OTT, Netflix, Amazon Prime, Java, Python, Deep Learning.
+
+\end{abstract}
+
+\section{Introduction}
+
+The OTT platform is a technology that enables the delivery of streamed content through internet-connected devices. This means viewers can watch video content across multiple devices without needing to be connected to cable or broadcast TV.
+
+There are two types of video and audio content played over the internet in an OTT streaming: Pay-to-access and Free-to-access. Subscription video-on-demand services offer access to film and television content, including shows and movies for which OTT acquires rights from the content owner.
+
+\subsection{Netflix}
+
+Netflix is an incredibly popular OTT platform that operates on a subscription-based model and is known for its excellent customer engagement services. Refer to the logo of Netflix in Figure~\ref{fig:netflix}.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.8\linewidth]{netflix.jpg}
+\caption{Netflix Logo}
+\label{fig:netflix}
+\end{figure}
+
+\end{document}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+program 10
+
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.6in]{geometry}
+\usepackage{hyperref}
+
+\pagestyle{empty}
+
+\newenvironment{compactitemize}{
+\begin{itemize}
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+}{
+\end{itemize}
+}
+
+\begin{document}
+
+\begin{center}
+
+{\Large \textbf{YOUR NAME}}\\[3pt]
+
+Chennai, Tamil Nadu, India\\
+
++91 XXXXX XXXXX \quad | \quad
+\href{mailto:your.email@gmail.com}{your.email@gmail.com}\\
+
+\href{https://linkedin.com/in/yourprofile}{LinkedIn}
+\quad | \quad
+\href{https://github.com/yourusername}{GitHub}
+
+\end{center}
+
+\vspace{3pt}
+
+\hrule
+
+\vspace{5pt}
+
+\section*{Professional Summary}
+
+Motivated Computer Science student with strong programming, analytical and problem-solving skills. Interested in software development and machine learning.
+
+\section*{Education}
+
+\textbf{Bachelor of Technology in Computer Science}
+\hfill 2023--2027
+
+Your University / College, Chennai, India
+
+\begin{compactitemize}
+\item CGPA: \textbf{8.5/10}
+\item Courses: Data Structures, Algorithms, DBMS, Operating Systems
+\end{compactitemize}
+
+\section*{Experience}
+
+\textbf{Software Engineering Intern}
+\hfill May 2026--July 2026
+
+\textit{Company Name, Chennai}
+
+\begin{compactitemize}
+\item Developed applications using Python and JavaScript.
+\item Implemented and tested software features.
+\item Fixed bugs and improved application reliability.
+\end{compactitemize}
+
+\section*{Projects}
+
+\textbf{Student Management System}
+\hfill \textit{Python, MySQL}
+
+\begin{compactitemize}
+\item Developed a system to manage student records.
+\item Added registration, search and update features.
+\end{compactitemize}
+
+\textbf{Machine Learning Project}
+\hfill \textit{Python, Scikit-learn}
+
+\begin{compactitemize}
+\item Developed a machine learning model for prediction.
+\item Performed data preprocessing, training and evaluation.
+\end{compactitemize}
+
+\section*{Technical Skills}
+
+\textbf{Programming:} Python, Java, C++, JavaScript, SQL\\
+\textbf{Frameworks:} React, Node.js, Django\\
+\textbf{Databases:} MySQL, PostgreSQL, MongoDB\\
+\textbf{Tools:} Git, GitHub, Docker, VS Code\\
+\textbf{Concepts:} Data Structures, Algorithms, OOP, DBMS, REST APIs
+
+\section*{Certifications \& Achievements}
+
+\begin{compactitemize}
+\item Python Programming -- Organization Name, 2026
+\item Machine Learning -- Organization Name, 2026
+\item Solved 300+ programming problems on LeetCode.
+\item Participated in a national-level hackathon.
+\end{compactitemize}
+
+\end{document}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+program 11
+
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{geometry}
+\usepackage{setspace}
+
+\geometry{margin=1in}
+
+\begin{document}
+
+\begin{center}
+
+\includegraphics[width=2cm]{PSG.jpg}\\[0.2cm]
+
+\textbf{\Large PSG College of Arts and Science, Coimbatore -14}\\[0.2cm]
+
+\textbf{Affiliated to Bharathiyaar University}\\[0.2cm]
+
+\textbf{\large SEMESTER MARKSHEET}\\[0.5cm]
+
+\end{center}
+
+\begin{tabbing}
+\hspace{4.5cm} \= \kill
+\textbf{Name} \> : M Anupama \\
+\textbf{Roll Number} \> : 25MEL001 \\
+\textbf{Program} \> : M.Sc. Applied Electronics \\
+\textbf{Semester} \> : IV \\
+\textbf{Year} \> : 2025 \\
+\end{tabbing}
+
+\vspace{0.5cm}
+
+\renewcommand{\arraystretch}{1.5}
+
+\begin{center}
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{S.No} &
+\textbf{Subject} &
+\textbf{Maximum Marks} &
+\textbf{Minimum Marks} &
+\textbf{Marks Obtained} &
+\textbf{Result} \\
+\hline
+1 & Basic Electronics & 100 & 40 & 85 & Pass \\
+\hline
+2 & VLSI & 100 & 40 & 72 & Pass \\
+\hline
+3 & Semiconductors & 100 & 40 & 68 & Pass \\
+\hline
+4 & IoT & 100 & 40 & 75 & Pass \\
+\hline
+5 & Digital Signal Processing & 100 & 40 & 80 & Pass \\
+\hline
+\multicolumn{4}{|r|}{\textbf{TOTAL}} &
+\textbf{380} &
+\textbf{PASS} \\
+\hline
+\end{tabular}
+
+\end{center}
+
+\vspace{1cm}
+
+\begin{tabbing}
+\hspace{6cm} \= \hspace{6cm} \= \kill
+\> \> \textbf{Principal} \\
+\> \> (Signature with Seal) \\[1.5cm]
+
+\textbf{Controller of Examination} \> \>
+\textbf{Head of the Department} \\
+
+(Signature) \> \> (Signature)
+
+\end{tabbing}
+
+\end{document}
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+program 12
+
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\begin{document}
+
+\begin{center}
+
+{\Large \textbf{PSG COLLEGE OF ARTS AND SCIENCE}}\\[5pt]
+
+{\large \textbf{DEPARTMENT OF MATHEMATICS}}\\[10pt]
+
+\textbf{MODEL QUESTION PAPER}\\[5pt]
+
+\textbf{LaTeX Programming}
+
+\end{center}
+
+\vspace{10pt}
+
+\noindent
+\textbf{Course:} IDC
+\hfill
+\textbf{Maximum Marks:} 25
+
+\vspace{5pt}
+
+\noindent
+\textbf{Time:} 1 Hour
+
+\vspace{5pt}
+
+\hrule
+
+\vspace{10pt}
+
+\section*{Instructions}
+
+\begin{enumerate}
+    \item Answer all questions.
+    \item Write the LaTeX commands wherever required.
+    \item Use suitable examples to explain your answers.
+\end{enumerate}
+
+\section*{PART A -- Multiple Choice Questions}
+
+\noindent
+\textbf{Answer all questions. \hfill (5 $\times$ 1 = 5 Marks)}
+
+\renewcommand{\labelenumii}{(\alph{enumii})}
+
+\begin{enumerate}
+
+    \item Which command is used to create a section in LaTeX?
+
+    \begin{enumerate}
+        \item \texttt{\textbackslash section}
+        \item \texttt{\textbackslash heading}
+        \item \texttt{\textbackslash title}
+        \item \texttt{\textbackslash chapter}
+    \end{enumerate}
+
+    \item Which command is used to make text bold in LaTeX?
+
+    \begin{enumerate}
+        \item \texttt{\textbackslash italic}
+        \item \texttt{\textbackslash textbf}
+        \item \texttt{\textbackslash bold}
+        \item \texttt{\textbackslash strong}
+    \end{enumerate}
+
+    \item Which command is used to insert a numbered list?
+
+    \begin{enumerate}
+        \item \texttt{itemize}
+        \item \texttt{enumerate}
+        \item \texttt{list}
+        \item \texttt{numberlist}
+    \end{enumerate}
+
+    \item Which command is used to create a document in LaTeX?
+
+    \begin{enumerate}
+        \item \texttt{\textbackslash document}
+        \item \texttt{\textbackslash begin\{document\}}
+        \item \texttt{\textbackslash start\{document\}}
+        \item \texttt{\textbackslash create\{document\}}
+    \end{enumerate}
+
+    \item Which package is commonly used to insert images in LaTeX?
+
+    \begin{enumerate}
+        \item \texttt{graphicx}
+        \item \texttt{image}
+        \item \texttt{picture}
+        \item \texttt{img}
+    \end{enumerate}
+
+\end{enumerate}
+
+\section*{PART B -- Descriptive Questions}
+
+\noindent
+\textbf{Answer all questions. \hfill (4 $\times$ 5 = 20 Marks)}
+
+\begin{enumerate}
+
+    \item Explain the basic structure of a LaTeX document with a suitable
+    example. \hfill [5]
+
+    \item Explain the use of the following LaTeX commands with examples:
+
+    \begin{enumerate}
+        \item \texttt{\textbackslash textbf}
+        \item \texttt{\textbackslash textit}
+        \item \texttt{\textbackslash underline}
+        \item \texttt{\textbackslash section}
+    \end{enumerate}
+    \hfill [5]
+
+    \item Explain how to create ordered and unordered lists in LaTeX with
+    suitable examples. \hfill [5]
+
+    \item Explain how to create a table in LaTeX. Write a LaTeX program to
+    create a table containing three columns and four rows. \hfill [5]
+
+\end{enumerate}
+
+\vfill
+
+\begin{center}
+\textbf{--- End of Question Paper ---}
+\end{center}
+
+\end{document}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
